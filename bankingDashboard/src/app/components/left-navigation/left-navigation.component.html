@@ -24,6 +24,10 @@
             <div class="menu-item menu-item-option" [ngClass]="{selected:menuItem.active}">
                 <img src="{{menuItem.image}}" alt="{{menuItem.text}}" class="menu-image">
                 <p class="menu-text">{{menuItem.text}}</p>
+                <label *ngIf="menuItem.switch" class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
             </div>
         </ng-template>
         <hr class="horizontal-line">
