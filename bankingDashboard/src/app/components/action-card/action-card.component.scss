@@ -1,0 +1,31 @@
+.action-card{
+    margin: 8px 8px 0 0;
+    height: calc(100% - 42px);
+}
+.mycard-wrap{
+    justify-content: center;
+    display: flex;
+}
+.mycard-image{
+    width: 260px;
+    margin-bottom: -30px;
+    margin-top: -36px;
+}
+.mycard-text{
+    justify-content: center;
+    align-items: center;
+}
+.card-count{
+    margin-top: 4px !important;
+}
+.quick-action-card{
+width: 84%;
+text-align: center;
+margin: 10px auto;
+border: 1px solid var(--background-color);
+padding-left: 30px;
+padding-right: 30px;
+}
+.each-action-header{
+    margin: 10px 0 !important;
+}

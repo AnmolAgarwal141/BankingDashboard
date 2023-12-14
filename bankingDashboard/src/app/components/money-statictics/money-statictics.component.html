@@ -1,0 +1,25 @@
+<div class="card vertical">
+    <div class="header d-flex justify-content-between">
+        <h2 >Money Statistics</h2>
+        <div class="d-flex">
+            <app-card-icons [icons]="filterCard"></app-card-icons>
+            <img src="assets/images/3dots.svg" alt="options" class="dots-image">
+        </div>
+    </div>
+    <div class="statistics d-flex">
+        <ng-template ngFor let-item [ngForOf]="statisticsData | keyvalue"let-index="index">
+            <div class="statistic-wrap">
+                <p class="opacity-change statistics-header">{{item.key}}</p>
+                <h2 class="statistics-amount">${{$any(item).value.value}}</h2>
+                <p class="opacity-change">
+                    <span class="{{$any(item).value.trend_color}}"><img src="assets/images/trend-icon-{{$any(item).value.trend_color}}.svg" alt="trend">+{{$any(item).value.trend}}%</span>
+                     from last month
+                </p>
+            </div>
+            <hr *ngIf="index<2" class="horizontal-line">
+        </ng-template>
+    </div>
+    <div class="graph">
+        <canvas id="canvas">{{chart}}</canvas>
+      </div>
+</div>

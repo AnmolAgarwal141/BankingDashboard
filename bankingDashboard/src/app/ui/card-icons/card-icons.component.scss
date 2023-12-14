@@ -1,0 +1,12 @@
+.options{
+    display: flex;
+    justify-content: space-between;
+}
+.option-icon{
+    border: 1px solid var(--background-color);
+    margin: 0 3px;
+    padding: 12px;
+}
+p{
+    font-weight: 600 !important;
+}

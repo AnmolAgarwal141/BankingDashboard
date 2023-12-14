@@ -1,0 +1,26 @@
+.header-wrap{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--text-color);
+    padding: 10px;
+    z-index: 2;
+    position:relative;
+}
+.header-text{
+    color: var(--white-color);
+    margin: auto 5px !important;
+}
+.header-btn{
+    background-color: var(--white-color);
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    padding: 6px 10px;
+    margin: auto 5px;
+}
+.img-close{
+    filter: grayscale(1) invert(1);
+    margin: auto 2px;
+    cursor: pointer;
+}

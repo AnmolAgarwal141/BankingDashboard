@@ -1,0 +1,23 @@
+
+<div class=" d-flex vertical">
+  <app-header></app-header>
+  <div class="container ">
+    <div class="left-bar" id="leftMenu">
+      <app-left-navigation (menuEvent)="changebarWidth($event)"></app-left-navigation>
+    </div>
+    <div class="main-wrap">
+        <app-top-navigation></app-top-navigation>
+      <div class="d-flex">
+        <div class="main-mycard">
+          <app-action-card class="full-width"></app-action-card>
+        </div>
+        <div class="main-myinfo">
+            <app-balance-info class="full-width"></app-balance-info>
+            <app-money-statictics class="full-width"></app-money-statictics>
+            <app-transaction-history class="full-width"></app-transaction-history>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

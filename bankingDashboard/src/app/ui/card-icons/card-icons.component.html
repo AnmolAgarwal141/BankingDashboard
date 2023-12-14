@@ -1,0 +1,11 @@
+<div class="options center">
+    <div class="card option-icon">
+        <p *ngIf="!icons.text2">{{icons.text1}}</p>
+        <img src="{{icons.img1}}" cl alt="message icon">
+        <p *ngIf="icons.text2 && icons.text1">{{icons.text1}}</p>
+    </div>
+    <div *ngIf="icons.img2" class="card option-icon">
+        <img src="{{icons.img2}}" alt="notification icon">
+        <p *ngIf="icons.text2">{{icons.text2}}</p>
+    </div>
+</div>

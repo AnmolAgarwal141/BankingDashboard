@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600&display=swap');
+:root {
+    --text-color:#2c2a3f;
+    --background-color:#f5f5f5;
+    --card-color:#fffc;
+    --white-color:#fff;
+    --border-color:#1e3050;
+    --green-color:green;
+    --red-color:red;
+    --yellow-color:#fde807;
+    // --green-color:#5eaa8c;
+    // --red-color:#cf0000;
+    // --yellow-color:#e1da01;
+}
+body{
+    margin: 0 !important;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 400;
+}
+p{
+    margin: 0 2px !important;
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 14px;
+}
+h2{
+    font-weight: 600;
+    font-size: 18px;
+    opacity: 1;
+    color: var(--text-color);
+    margin: auto 0 !important;
+}
+.d-none{
+    display: none;
+}
+.d-flex{
+    display: flex;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.card{
+    background-color: var(--card-color);
+    border-radius: 8px;
+    padding: 12px 20px;
+    display: flex;
+}
+input{
+    border: none;
+    outline: none;
+    background-color: inherit;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.horizontal-line{
+    width: 80%;
+    opacity: 50%;
+    color: #f6f6f6;
+}
+.vertical{
+    flex-direction: column;
+}
+.dots-image{
+    filter: opacity(0.5);
+    margin: 0 5px;
+}
+.section-heading-text{
+    justify-content: center;
+    align-items: center;
+}
+.opacity-change{
+    opacity: 0.5;
+}
+.cursor-pointer{
+    cursor: pointer;
+}

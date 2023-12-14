@@ -1,0 +1,26 @@
+.card-payment{
+    text-align: center;
+    margin: 10px 15px;
+    border: 2px dotted var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: inherit;
+}
+.add-image{
+    border: 2px dotted var(--border-color);
+    border-radius: 50%;
+    padding: 1px;
+    height: 30px;
+}
+.menu-title{
+    margin: 10px !important;
+    font-weight: 600;
+}
+.horizontal{
+    height: 24px;
+}
+.vertical{
+    height: 70px;
+}

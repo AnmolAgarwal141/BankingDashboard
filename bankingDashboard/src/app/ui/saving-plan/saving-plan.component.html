@@ -1,0 +1,24 @@
+<div *ngIf="data" class="card saving-card vertical">
+    <div class="d-flex justify-content-between">
+        <div class="d-flex">
+            <app-card-icons *ngIf="data.img!==''" [icons]="cardIcons" class="item-icon"></app-card-icons>
+            <div class="d-flex vertical item-details">
+                <h2>{{data.title}}</h2>
+                <p class="opacity-change" [ngClass]="{'t-amount-bal':data.balanceComp}"><span *ngIf="!data.balanceComp">Target</span> ${{data.totalAmount}}</p>
+            </div>
+        </div>
+        <img src="assets/images/3dots.svg" alt="options" class="dots-image">
+    </div>
+    <div class="progress-wrap">
+        <div *ngIf="!data.balanceComp" class="d-flex justify-content-between">
+            <p>Total: ${{data.targetAchieved}}</p>
+            <p class="opacity-change">{{percentage}}%</p>
+        </div>
+        <progress value="{{data.targetAchieved}}" max="{{data.targetAmount}}" class="progress"></progress>
+        <div *ngIf="data.balanceComp" class="d-flex justify-content-between">
+            <p class="opacity-change">Monthly payment limit</p>
+            <p>${{data.targetAchieved}}<span class="opacity-change">/${{data.targetAmount}}</span></p>
+        </div>
+    </div>
+        
+</div>

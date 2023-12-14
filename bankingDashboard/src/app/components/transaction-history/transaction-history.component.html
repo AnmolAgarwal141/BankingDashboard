@@ -1,0 +1,56 @@
+<div class="card vertical transaction-card">
+    <div class="header d-flex justify-content-between">
+        <h2>Transaction History</h2>
+        <div class="d-flex">
+            <div class="seacrh-card">
+                <img src="assets/images/search-icon.svg" class="search-image" alt="search icon">
+                <input placeholder="Search" type="text" class="search-input" [(ngModel)]="searchString">
+            </div>
+            <app-card-icons [icons]="filterCard"></app-card-icons>
+        </div>
+    </div>
+    <div class="tarnsactions d-flex">
+        <table class="transaction-table">
+            <thead>
+                <tr class="transaction-header-wrap transaction-wrap">
+                    <ng-template ngFor let-head [ngForOf]="tableHeaders">
+                        <th><p class="transaction-header-text transaction-text">{{head}}
+                            <span class="d-flex vertical images-arrow">
+                                    <img src="assets/images/up-arrow-icon.svg" class="img-arrow">
+                                    <img src="assets/images/down-arrow-icon.svg" class="img-arrow">
+                            </span>
+                        </p></th>
+                    </ng-template>
+                    <td><p class="transaction-header-text transaction-text">Action</p></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of tableData | transactionFilter:searchString | slice:0:5" class="transaction-wrap">
+                    <ng-template ngFor let-item [ngForOf]="$any(data) | keyvalue">
+                        <td>
+                            <p class="transaction-text transaction-body-text" [ngClass]="{'status-text-success':item.key==='status' && item.value==='Success','status-text-failed':item.key==='status' && item.value==='Failed','status-text-pending':item.key==='status' && item.value==='Pending','blur-text':item.key==='type' || item.key==='uTime'}">{{item.value}}</p>
+                        </td>
+                    </ng-template>
+                    <td><img src="assets/images/3dots.svg" class='cursor-pointer' alt="options" (click)="openTransactionDialog(data)"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<dialog id="transactionDialog" class="dialog">
+    <div class="d-flex vertical">
+        <h2 class="dialog-header">Transaction Detail</h2>
+        <div class="d-flex dialog-text-wrap">
+            <h2>Name:</h2>
+            <p class="dialog-text">{{selectedName}}</p>
+        </div>
+        <div class="d-flex dialog-text-wrap">
+            <h2>Type:</h2>
+            <p class="dialog-text">{{selectedType}}</p>
+        </div>
+        <div class="close-button-wrap">
+            <button type="button" class="close-button" (click)="closeDialog()">OK</button>
+        </div>
+
+    </div>
+</dialog>

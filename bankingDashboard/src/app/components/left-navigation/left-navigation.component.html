@@ -1,0 +1,35 @@
+<div class="left-menu-wrap" id="showMenu">
+    <div class="menu-item-wrap first-item d-flex justify-content-between">
+        <div class="menu-item menu-item-heading">
+            <img src="assets/images/bank-icon.svg" alt="bank icon" class="menu-image">
+            <h2>Hexa bank</h2>
+        </div>  
+        <img class="hide-icon" src="assets/images/prev-icon.svg" (click)="ToggleMenuBar()">
+    </div>
+    <div class="menu-item-wrap d-flex justify-content-between">
+        <div class="menu-item">
+            <img src="assets/images/user-icon.svg " alt="user icon" class="menu-image">
+            <p class="sub-heading-text">Anmol Agarwal</p>
+        </div>
+        <div class="d-flex vertical images-arrow">
+            <img src="assets/images/up-arrow-icon.svg" class="img-arrow">
+            <img src="assets/images/down-arrow-icon.svg" class="img-arrow">
+        </div>
+        
+    </div>
+    <hr class="horizontal-line">
+    <div *ngFor="let menuWrap of menuItems" class="each-menu-grp">
+        <p class="menu-title">{{menuWrap.title}}</p>
+        <ng-template ngFor let-menuItem [ngForOf]="menuWrap.items">
+            <div class="menu-item menu-item-option" [ngClass]="{selected:menuItem.active}">
+                <img src="{{menuItem.image}}" alt="{{menuItem.text}}" class="menu-image">
+                <p class="menu-text">{{menuItem.text}}</p>
+            </div>
+        </ng-template>
+        <hr class="horizontal-line">
+    </div>
+    <app-add-new [data]="newCard"></app-add-new>
+</div>
+<div class="left-menu-wrap hide d-none" id="hideMenu">
+    <img class="hide-icon first-item" src="assets/images/bank-icon.svg" alt="bank icon" (click)="ToggleMenuBar()">
+</div>

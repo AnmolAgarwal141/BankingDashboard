@@ -1,0 +1,110 @@
+.transaction-card{
+    margin: 10px 0;
+}
+.seacrh-card{
+    background-color: var(--white-color);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--background-color);
+    width: 120px;
+    display: flex
+}
+.search-image{
+    margin: -3px 6px;
+}
+.search-input{
+    width: 80px;
+}
+.transaction-header-text{
+    color: #afb3bb;
+    font-size: 14px;
+    display: flex;
+}
+.transaction-header-wrap{
+    background-color: #f5f6f8;
+    color: #afb3bb;
+    box-shadow: 0px 2px 3px 1px grey;
+}
+.transaction-text{
+    text-transform: capitalize;
+    font-size: 13px;
+    text-align: left;
+}
+.transaction-wrap{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+.transaction-table{
+    width: 100%;
+    margin-top: 20px;
+}
+td,th{
+    text-align: left;
+    width: 15%;
+    margin: 0 3px;
+}
+.transaction-body-text{
+    font-weight: 600;
+}
+.blur-text{
+    opacity: 0.5;
+}
+.status-text-success{
+    color: var(--green-color);
+    text-align: center;
+    padding: 4px 6px;
+    background-color: #dbfff2;
+}
+.status-text-failed{
+    color: var(--red-color);
+    text-align: center;
+    padding: 4px 6px;
+    background-color: #ff7373ad;
+}
+.status-text-pending{
+    color: var(--yellow-color);
+    text-align: center;
+    padding: 4px 6px;
+    background-color: #fbff1787;
+}
+.img-arrow{
+    width: 8px;
+}
+.images-arrow{
+    margin: 0px 5px;
+    filter: invert(1) grayscale(1);
+}
+.dialog{
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    width: 360px;
+}
+.close-button{
+    border:none;
+    border-radius: 8px;
+    background-color: #2c2a3f;
+    color: var(--white-color);
+    font-weight: 600;
+    padding: 8px 24px;
+    cursor: pointer;
+}
+.dialog-header{
+    justify-content: center;
+    display: flex;
+    font-size: 28px;
+    margin-bottom: 8px !important;
+}
+.close-button-wrap{
+    display: flex;
+    justify-content: flex-end;
+}
+.dialog-text{
+    margin-top: 4px !important;
+    margin-left: 8px !important;
+}
+.dialog-text-wrap{
+    margin: 8px 20px;
+}
